@@ -1,6 +1,5 @@
 > ###"And God said, Let there be light: and there was light."
-###- Genesis 1:3
----
+####- Genesis 1:3
 
 Since the Pope Benedict XVI has sent out his first tweet from his account (@Pontifex) in 2012, nothing interesting has been done with the Pope's twitterfeed, and so PontiFlux was born.
 
