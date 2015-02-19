@@ -12,3 +12,20 @@ Watch the video made for this project here: [This if PontiFlux on YouTube](http:
 
 This repository will give you an insight in the Arduino and Web code of the project.
 
+#How it works
+1. Arduino boot & setup phase
+2. Red light pops up to indicate it's not ready
+2. The Arduino makes a GET-request to the server with a dummy since_id (1)
+3. Server recognises the dummy since_id and fetches the twitterfeed of the set user
+4. Server responds to the Arduino with the id of the most recent Tweet
+5. ?
+6. ?
+7. ?
+8. New Tweet incomming
+9. Blink green led 5 times
+
+
+tl;dr
+1. Arduino boots up
+2. Checks with the server for new tweets
+3. New one? BANG! Turns on the lightswitch
