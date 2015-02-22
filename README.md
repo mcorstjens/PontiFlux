@@ -33,9 +33,9 @@ This repository will give you an insight in the Arduino and Web code of the proj
    3 = No new tweet  
    4 = New tweet, unleash Ragnarok
 
-6. Arduino reads the respons from the server and puts the values between the XML tags into variables
+6. Arduino reads the respons from the server, filters the values between the XML tags and puts them into variables
 
-7. The since_id is stored in a variable to act as the memory of the Arduino
+7. The since_id is stored in a variable to act as the memory of the Arduino to use on future requests
 
 8. Arduino recognises state 2 and knows it must now complete the setup phase
 
