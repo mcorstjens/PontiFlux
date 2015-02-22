@@ -13,16 +13,25 @@ Watch the video made for this project here: [This if PontiFlux on YouTube](http:
 This repository will give you an insight in the Arduino and Web code of the project.
 
 #How it works
-1. Arduino boot & setup phase
-2. Red light pops up to indicate it's not ready
-2. The Arduino makes a GET-request to the server with a dummy since_id (1)
-3. Server recognises the dummy since_id and fetches the twitterfeed of the set user
-4. Server responds to the Arduino with the id of the most recent Tweet
-5. ?
-6. ?
-7. ?
-8. New Tweet incomming
-9. Blink green led 5 times
+Arduino boot & setup phase
+1. Arduino boots and a red light is turned on to indicate it's not ready to operate yet;
+2. The Arduino makes a first GET-request to the server with since_id: 1;
+...Since_id 1 is the id of the very first tweet
+3. Server recognises the since_id and fetches the twitterfeed of the set user (Pontifex).
+...Because all tweet are newer then the very first tweet, the server retreives all tweets from the set user;
+4. Server filters the feed to only receive the since_id from the very latest tweet;
+5. Server responds to the Arduino with the id of the most recent Tweet (Example: 398453667667263487) and state 2 within the XML tags <state></state> and <sinceid></sinceid>;
+...States are a easy way of communication used between the server and the Arduino to know what action to perform:
+...1 = No since_id send with the request/error handling
+...2 = Startup phase of the Arduino, send most recent id
+...3 = No new tweet
+...4 = New tweet
+6. Arduino reads the respons from the server and puts the values between the XML tags into variables;
+7. The since_id is stored in a variable to act as the memory of the Arduino
+8. Startup is complete and a green light is turned on to indicate it's ready to operate;
+9. 
+10. New Tweet incomming
+11. Blink green led 5 times
 
 
 tl;dr
