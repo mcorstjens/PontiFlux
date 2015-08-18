@@ -47,10 +47,3 @@ This repository will give you an insight in the Arduino and Web code of the proj
 
 1. New Tweet incomming
 2. Blink green led 5 times
-
-
-tl;dr
-
-1. Arduino boots up
-2. Checks with the server for new tweets
-3. New one? BANG! Turns on the lightswitch
