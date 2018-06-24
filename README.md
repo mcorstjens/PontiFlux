@@ -1,5 +1,7 @@
-> ###"And God said, Let there be light: and there was light."
-####- Genesis 1:3
+"And God said, Let there be light: and there was light."
+======
+_- Genesis 1:3_
+------
 
 Since the Pope Benedict XVI has sent out his first tweet from his account ([@Pontifex](https://twitter.com/Pontifex)) in 2012, nothing interesting has been done with the Pope's twitterfeed, and so PontiFlux was born.
 
@@ -12,7 +14,7 @@ Watch the video made for this project here: [This if PontiFlux on YouTube](http:
 
 This repository will give you an insight in the Arduino and Web code of the project.
 
-Project made: December 2013
+_Project made: December 2013_
 
 
 
