@@ -1,7 +1,8 @@
-![alt text](http://mcorstjens.nl/img/portfolio_items/pontiflux/pontiflux_1.jpg "PontiFlux in action")
-
 ### "And God said, Let there be light: and there was light."
-#### _ - Genesis 1:3 _
+#### - Genesis 1:3
+
+
+![PontiFlux in action](http://mcorstjens.nl/img/portfolio_items/pontiflux/pontiflux_1.jpg "PontiFlux in action")
 
 
 Since the Pope Benedict XVI has sent out his first tweet from his account ([@Pontifex](https://twitter.com/Pontifex)) in 2012, nothing interesting has been done with the Pope's twitterfeed, and so PontiFlux was born.
