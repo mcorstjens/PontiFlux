@@ -14,8 +14,13 @@ This repository will give you an insight in the Arduino and Web code of the proj
 
 Project made: December 2013
 
-#How it works
-####Arduino boot & setup phase
+
+
+
+How it works
+======
+Arduino boot & setup phase
+------
 
 1. Arduino boots and a red light is turned on to indicate it's not ready to operate yet
 
@@ -47,7 +52,10 @@ Project made: December 2013
 
 10. Setup phase is complete
 
-####Operation phase
+
+
+Operation phase
+------
 
 1. Every 5 seconds The Arduino makes a first GET-request to the server with the most recent since_id received from the server
 
@@ -55,12 +63,10 @@ Project made: December 2013
 
     If no new tweets have been sent, the result will be 0
 
-3. a. If no new tweets are available, server sends state 3 within the XML tags `<state></state>` to the arduino
+3. If new tweets are available, the server responds to the Arduino with the id of the most recent Tweet (Example: 398453667667263487) and state 4 within the XML tags `<state></state>` and `<sinceid></sinceid>`
 
-    State 3 = No new tweet
-    The arduino will do nothing and continue making requests
-
-3. b.  If new tweets are available, the server responds to the Arduino with the id of the most recent Tweet (Example: 398453667667263487) and state 4 within the XML tags `<state></state>` and `<sinceid></sinceid>`
+    If no new tweets are available, server sends state 3 within the XML tags `<state></state>` to the arduino
+    If state 3 is returned, the arduino will do nothing and continue making requests
 
 4. Arduino stores the new since_id
 
