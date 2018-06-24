@@ -1,8 +1,5 @@
-"And God said, Let there be light: and there was light."
-======
-_- Genesis 1:3_
-------
-
+### "And God said, Let there be light: and there was light."
+### _- Genesis 1:3_
 Since the Pope Benedict XVI has sent out his first tweet from his account ([@Pontifex](https://twitter.com/Pontifex)) in 2012, nothing interesting has been done with the Pope's twitterfeed, and so PontiFlux was born.
 
 PontiFlux is an installation that visualises the Pope's twitterfeed in the real world. Whenever the Pope sends out a new Tweet, PontiFlux wil trigger a electro circuit (Arduino) which turns on a bright light in the shape of a latin cross. Taking "Christ shall give thee light" quite literally. 
