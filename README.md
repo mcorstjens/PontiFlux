@@ -12,10 +12,13 @@ Watch the video made for this project here: [This if PontiFlux on YouTube](http:
 
 This repository will give you an insight in the Arduino and Web code of the project.
 
+Project made: December 2013
+
 #How it works
 ####Arduino boot & setup phase
 
 1. Arduino boots and a red light is turned on to indicate it's not ready to operate yet
+
 2. The Arduino makes a first GET-request to the server with since_id: 1
 
    Since_id 1 is the id of the very first tweet ever sent
@@ -25,6 +28,7 @@ This repository will give you an insight in the Arduino and Web code of the proj
    Since all tweets are newer then the very first tweet, the server retreives all tweets from the set user
 
 4. Server filters the feed to only receive the since_id from the very latest tweet
+
 5. Server responds to the Arduino with the id of the most recent Tweet (Example: 398453667667263487) and state 2 within the XML tags `<state></state>` and `<sinceid></sinceid>`
 
    States are a way of communication used between the server and the Arduino to know what action to perform:  
@@ -45,5 +49,25 @@ This repository will give you an insight in the Arduino and Web code of the proj
 
 ####Operation phase
 
-1. New Tweet incomming
-2. Blink green led 5 times
+1. Every 5 seconds The Arduino makes a first GET-request to the server with the most recent since_id received from the server
+
+2. Server recognises the since_id and fetches a list of tweets send since the provided since_id
+
+    If no new tweets have been sent, the result will be 0
+
+3. a. If no new tweets are available, server sends state 3 within the XML tags `<state></state>` to the arduino
+
+    State 3 = No new tweet
+    The arduino will do nothing and continue making requests
+
+3. b.  If new tweets are available, the server responds to the Arduino with the id of the most recent Tweet (Example: 398453667667263487) and state 4 within the XML tags `<state></state>` and `<sinceid></sinceid>`
+
+4. Arduino stores the new since_id
+
+5. Arduino will blink the green led 5 times and turn on the relay
+
+    Any device can be connected to this relay, for this project a bright cross-shaped light
+
+6. Arduino stores the new since_id for future requests
+
+7. Arduino will continue the operation phase
